@@ -781,8 +781,9 @@ static int sia81xx_resume(
 		mdelay(45);/* wite chip power up, the time must be > 1ms */
 	}
 
-	if (is_chip_type_supported(sia81xx->chip_type))
+	if (is_chip_type_supported(sia81xx->chip_type)){
 		sia81xx_reg_init(sia81xx);
+	}
 
 	/*
 	if (CHIP_TYPE_SIA8101 == sia81xx->chip_type ||
